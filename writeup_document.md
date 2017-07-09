@@ -4,48 +4,41 @@
 
 **Finding Lane Lines on the Road**
 
-This document explains about the steps involved in Lane detection.
+This document explains about the steps involved in Traffic sign classification using Deep Learning.
 
 
-[//]: # (Image References)
-
-[image1]: ./examples/grayscale.jpg "Grayscale"
-
----
 
 ### Reflection
 
-### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
+### 1. Pipeline.
 
 The Pipeline is divided into following steps
-* Conversion of Image to Gray Scale.
-* Blurring image using Gaussian Blur function.
-* Canny Edge detection
-* Extracting a region of interest where there is high possibility of finding lane. Luckily for this project it is ok to look at the road region which will be in bottom half of the pixels.
-* Finding Hough lines in the region of interest.
-* Extracting the information from the Houh lines and mark the lanes in solid Red color.
+* Extract the training, vladidation and testing datasets from the pickled files
+* Normalize the input(i.e image data)
+* Cross check for the image dimensions, number of images in each set etc. 
+* Shuffle the training data
+* Train the system with Lenet Architecture designed for this task. 
+* Validate it with Validation set.
+* Test the results with the trained parameters. 
 
+### 1.1 Neural Network Architecture:
 
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function in below ways
-
-* For every hough line check the slope, if the slope is positive collect these points into a global list for left lane else into a list for right lane.
-* Polyfit function is used with all the points extracted above to get a liner equation of 1st order.
-* Find the lower and top intercetps for x using this equation and as y coordinate s fixed (image dimensions)
-* Draw the line with these two points onto the image for lane detection.
-* To counter false positives etc, a simple check mechanism is introduced in which the current slope is compared against the mean slope and if it varies for more than 20% then it is rejected and old line is drawn on the image.
-
-
-Here is an image after the final lane_detection
-
-[image1]: ./examples/final.jpg "Final Image"
+This network is combination of convolutional and fully connected neural networks. 
+* It has 3 steps of convolution in below 3 levels. 
+  * Convl one reducing the 32x32x3 data to 28x28x12 
+  * relu activation function and 2x2 average filter added.
+  * Conv 2 is same as above modifying the next input to 5x5x32
+  * Conv 3 is 1x1 convolution added to create non linear affect for the network. 
+* Then the data is flattened out and passed through 4 levels of fully connected networks reducing the dimensions from 800->500->250->120->84->43 
+* Relu activation function is added.
+* Dropout is added for regularization at all levels except last one. 
 
 
 ### 2. Identify potential shortcomings with your current pipeline
-* The feedback mechanism to counter false positives is not really robust, it works here in simple situations to counter rapid chnages in lane detection.
-* The lane differentiation mechanism is especially not good. It is a problem when the lanes are curved.
+* The hyper parametrs are tough to choose and after multiple trails also I couldnt go much further. 
+* I assume this performance could be achieved with a smaller network and better parameters. 
+
 
 ### 3. Suggest possible improvements to your pipeline
 
-* The check mechanism need to be improved such that it only considers a limited set of previous images based on vehicle speed, curvatures of the lane etc.
-
-* There is a problem that if the lane is really curved the slope differentiation function will not work and something better need to be devised. I tried few approaches but nothing worked.
+* Find better ways to tune parameters and ways to arrange the network. 
