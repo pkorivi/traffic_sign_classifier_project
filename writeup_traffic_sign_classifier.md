@@ -14,7 +14,7 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/visualization.jpg "Visualization"
+[image1]: ./traffic_data.jpg "traffic_data"
 [image2]: ./examples/grayscale.jpg "Grayscaling"
 [image3]: ./examples/random_noise.jpg "Random Noise"
 [image4]: ./examples/placeholder.png "Traffic Sign 1"
@@ -24,36 +24,33 @@ The goals / steps of this project are the following:
 [image8]: ./examples/placeholder.png "Traffic Sign 5"
 
 ---
-###Writeup / README
+**Detailed summary**
 
-####1. 
-Here is a link to my [project code](https://github.com/pkorivi/traffic_sign_classifier_project/blob/master/Traffic_Sign_Classifier.ipynb)
+1. Here is a link to my [project code](https://github.com/pkorivi/traffic_sign_classifier_project/blob/master/Traffic_Sign_Classifier.ipynb)
 
-###Data Set Summary & Exploration
+2. Data Set Summary & Exploration
 
-####1. Summary Statistics of the traffic sign data used are as follows:
+Summary Statistics of the traffic sign data used are as follows:
 * The size of training set is 34799
 * The size of the validation set is 4410
 * The size of test set is 12630
 * The shape of a traffic sign image is (32, 32, 3)
 * The number of unique classes/labels in the data set is 43
 
-####2. Include an exploratory visualization of the dataset.
-
 Here is an exploratory visualization of the training data set.
 
-![alt text][traffic_data.png]
+![alt text][image1]
 
-###Design and Test a Model Architecture
+**Design and Test a Model Architecture**
 
-####1. Preprocessing:
+3. Preprocessing:
 
 As a first step, I have normlized the taffic sign images, as normalized data because the training results are better with normalized data by converging better. 
 
 Grayscaling the images did not fetch any better results. It can be because the traffic signs are of different color and it can help in finding results more accurately. 
 
 
-####2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
+4. Architecture
 
 
 ### 1. Pipeline.
