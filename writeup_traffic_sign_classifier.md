@@ -23,6 +23,12 @@ The goals / steps of this project are the following:
 [image7]: ./web_img/rsz_04.jpg "Traffic Sign 4"
 [image8]: ./web_img/rsz_05.jpg "Traffic Sign 5"
 
+[image9]: ./web_img/25.png "Traffic Sign 1"
+[image10]: ./web_img/30.png "Traffic Sign 2"
+[image11]: ./web_img/8.png "Traffic Sign 3"
+[image12]: ./web_img/27.png "Traffic Sign 4"
+[image13]: ./web_img/40.png "Traffic Sign 5"
+
 ---
 **Detailed summary**
 
@@ -112,7 +118,7 @@ My final model results were:
 ![alt text][image4] ![alt text][image5] ![alt text][image6] 
 ![alt text][image7] ![alt text][image8]
 
-The first image might be difficult to classify because ...
+The images 3 and 5 should be tough to classify as the 3rd image has a different background color(yellow) for the text compared to standard white and 5th image has some watermarks on it which can be similar to dust or reflections. The other images should be fairly possible to estimate. 
 
 ####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
@@ -120,11 +126,11 @@ Here are the results of the prediction:
 
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Stop Sign      		| Stop sign   									| 
-| U-turn     			| U-turn 										|
-| Yield					| Yield											|
-| 100 km/h	      		| Bumpy Road					 				|
-| Slippery Road			| Slippery Road      							|
+| Road Work      		| Road Work  									| 
+| Snow     			| Snow										|
+| 120Kmph					| 70kmph											|
+| Pedestrians	      		| Snow					 				|
+| Roundabout			| Round about      							|
 
 
 The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
@@ -135,20 +141,10 @@ The code for making predictions on my final model is located in the 11th cell of
 
 For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
 
-| Probability         	|     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
+The various predictions for each image are listed in the following charts
 
-
-For the second image ... 
+![alt text][image9] ![alt text][image10] ![alt text][image11] 
+![alt text][image12] ![alt text][image13]
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 ####1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
-
-
-
-This model is inpired from the lecture series. 
