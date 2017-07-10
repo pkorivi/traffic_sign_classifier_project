@@ -1,4 +1,4 @@
-#**Traffic Sign Recognition** 
+**Traffic Sign Recognition** 
 
 
 **Build a Traffic Sign Recognition Project**
@@ -14,21 +14,21 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./traffic_data.jpg "traffic_data"
+[image1]: ./traffic_data.png "traffic_data"
 [image2]: ./examples/grayscale.jpg "Grayscaling"
 [image3]: ./examples/random_noise.jpg "Random Noise"
-[image4]: ./examples/placeholder.png "Traffic Sign 1"
-[image5]: ./examples/placeholder.png "Traffic Sign 2"
-[image6]: ./examples/placeholder.png "Traffic Sign 3"
-[image7]: ./examples/placeholder.png "Traffic Sign 4"
-[image8]: ./examples/placeholder.png "Traffic Sign 5"
+[image4]: ./web_img/rsz_01.jpg "Traffic Sign 1"
+[image5]: ./web_img/rsz_02.jpg "Traffic Sign 2"
+[image6]: ./web_img/rsz_03.jpg "Traffic Sign 3"
+[image7]: ./web_img/rsz_04.jpg "Traffic Sign 4"
+[image8]: ./web_img/rsz_05.jpg "Traffic Sign 5"
 
 ---
 **Detailed summary**
 
-1. Here is a link to my [project code](https://github.com/pkorivi/traffic_sign_classifier_project/blob/master/Traffic_Sign_Classifier.ipynb)
+### 1. Here is a link to my [project code](https://github.com/pkorivi/traffic_sign_classifier_project/blob/master/Traffic_Sign_Classifier.ipynb)
 
-2. Data Set Summary & Exploration
+### 2. Data Set Summary & Exploration
 
 Summary Statistics of the traffic sign data used are as follows:
 * The size of training set is 34799
@@ -43,17 +43,17 @@ Here is an exploratory visualization of the training data set.
 
 **Design and Test a Model Architecture**
 
-3. Preprocessing:
+### 3. Preprocessing:
 
 As a first step, I have normlized the taffic sign images, as normalized data because the training results are better with normalized data by converging better. 
 
 Grayscaling the images did not fetch any better results. It can be because the traffic signs are of different color and it can help in finding results more accurately. 
 
 
-4. Architecture
+### 4. Architecture
 
 
-### 1. Pipeline.
+# 1. Pipeline.
 
 The Pipeline is divided into following steps
 * Extract the training, vladidation and testing datasets from the pickled files
@@ -64,7 +64,7 @@ The Pipeline is divided into following steps
 * Validate it with Validation set.
 * Test the results with the trained parameters. 
 
-### 1.1 Neural Network Architecture:
+# 2 Neural Network Architecture:
 
 This network is combination of convolutional and fully connected neural networks inspired from Lenet Model. 
 * It has 3 steps of convolution in below 3 levels. 
@@ -77,7 +77,7 @@ This network is combination of convolutional and fully connected neural networks
 * Dropout is added for regularization and to avoid overfitting at all levels of fully connected network.
 
 
-####3. Training the Model
+### 5. Training the Model
 
 Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
@@ -91,7 +91,7 @@ zero mean and 0.1 standard deviation is used in weight calculation.
 
 Early termination is implemented to avoid over fitting and around 30~35 Epochs seems to be a good training time. Increasing or decreasing the learning rate tended to destabilize the model.  
 
-####4. 
+### 6.Results and Architecture decision summary 
 My final model results were:
 * training set accuracy of 99.5
 * validation set accuracy of 94.5-95.6 
@@ -105,11 +105,9 @@ My final model results were:
 * As there are various types of features that could be extracted in terms of color, shape a convolutional model appeared to be a good choice.
  
 
-###Test a Model on New Images
+### 7. Test a Model on New Images
 
-####1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
-
-Here are five German traffic signs that I found on the web:
+# 1.Here are five German traffic signs that I found on the web:
 
 ![alt text][image4] ![alt text][image5] ![alt text][image6] 
 ![alt text][image7] ![alt text][image8]
