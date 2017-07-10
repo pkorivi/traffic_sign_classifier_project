@@ -32,9 +32,9 @@ The goals / steps of this project are the following:
 ---
 **Detailed summary**
 
-#### 1. Here is a link to my [project code](https://github.com/pkorivi/traffic_sign_classifier_project/blob/master/Traffic_Sign_Classifier.ipynb)
+##### 1. Here is a link to my [project code](https://github.com/pkorivi/traffic_sign_classifier_project/blob/master/Traffic_Sign_Classifier.ipynb)
 
-#### 2. Data Set Summary & Exploration
+##### 2. Data Set Summary & Exploration
 
 Summary Statistics of the traffic sign data used are as follows:
 * The size of training set is 34799
