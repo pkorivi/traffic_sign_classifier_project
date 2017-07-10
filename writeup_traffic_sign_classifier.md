@@ -128,12 +128,13 @@ Here are the results of the prediction:
 |:---------------------:|:---------------------------------------------:| 
 | Road Work      		| Road Work  									| 
 | Snow     			| Snow										|
-| 120Kmph					| 60 kmph											|
-| Pedestrians	      		| Pedestrians					 				|
-| Roundabout			| Round about      							|
+| 120Kmph					| 20 kmph											|
+| Pedestrians	      		| General Caution					 				|
+| Roundabout			| End of speed limit      							|
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of 93 %.
+
+The model was able to correctly guess 2 of the 5 traffic signs, which gives an accuracy of 40% but this varying over multiple runs, I ahve received accuraciesof 40-80% with 1,2 nd images always being classified corect and last 3 missing sometimes. This result is not completely in favour with the prediction accuracy of test data. 
 
 ##### 3. Discussion of results
 
